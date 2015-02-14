@@ -32,6 +32,7 @@ function authenticate(req, res, next) {
 }
 
 app.get('/widget', authenticate, routes.widget);
+app.get('/widgetstandalone', routes.widget);
 app.get('/settings', authenticate, routes.settings);
 app.post('/app/settingsupdate', authenticate, routes.settingsupdate);
 
